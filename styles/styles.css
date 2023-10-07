@@ -36,6 +36,7 @@
   --color-grey-6: #12181b;
 }
 
+
 body {
   background-color: var(--color-primary);
   font-family: "Poppins", sans-serif;
@@ -43,6 +44,122 @@ body {
   color: var(--color-white);
   transition: all 0.4s ease-in-out;
 }
+
+
+.column {
+
+  width: 450px;
+  height: 250px;
+  overflow: hidden;
+  /* This overflow hidden makes the image fit in the container */
+}
+
+.row{
+  display: flex;
+  overflow-x: scroll ;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.row div span img {
+  /* Set the desired width and height for the images */
+  max-width: 500px; /* Adjust this to your preferred width */
+  height: auto; /* Maintain aspect ratio */
+
+  /* Add any other styling you need for the images */
+  margin: 10px; /* Add spacing around the images */
+
+}
+
+
+
+.row div{
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 20px;
+  padding: 10px;
+  flex: none;
+}
+
+.row div img{
+  width : 100%;
+  filter: grayscale(100%);
+  transition: transform 0.5s;
+}
+
+.row::-webkit-scrollbar{
+  display: none;
+}
+
+.row-wrap{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10%;
+  margin-left: -22%;
+  width: 1600px;
+
+
+}
+
+#backBtn, #nextBtn{
+  width: 50px;
+  cursor: pointer;
+  margin: 40px;
+}
+
+.row div img:hover{
+  filter: grayscale(0);
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+
+
+.column img {
+  width: 100%;
+  /*We are giving the image width and height and object fit cover makes the image scale properly*/
+  height: 100%;
+  object-fit: cover;
+}
+
+.column-2 {
+
+  width: 450px;
+
+  height: 250px;
+  overflow: hidden;  
+  flex: none;
+
+}
+
+.column-2 img {
+  width: 100%;
+  /*We are giving the image width and height and object fit cover makes the image scale properly*/
+  height: 100%;
+  object-fit: cover;
+}
+
+.column-3 {
+
+  width: 450px;
+
+  height: 250px;
+  overflow: hidden;
+  /* This overflow hidden makes the image fit in the container */
+  flex: none;
+ 
+}
+
+
+.column-3 img {
+  width: 100%;
+  /*We are giving the image width and height and object fit cover makes the image scale properly*/
+  height: 100%;
+  object-fit: cover;
+}
+
 
 a {
   display: inline-block;
